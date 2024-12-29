@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reminders</title>
+    <link rel="stylesheet" href="style7.css">
+    <style>
+        label, input, button {
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+        input {
+            width: 100%;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 style="text-align: center;">REMINDERS</h2>
+        <label for="title">Title</label>
+        <input type="text" id="title" />
+        <label for="description">Description</label>
+        <input type="text" id="description" />
+        <label for="date">Date</label>
+        <input type="date" id="date" />
+        <label for="time">Time</label>
+        <input type="time" id="time" />
+        <button class="btn" onclick="add();">ADD</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Date & Time</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="reminderTableBody"></tbody>
+        </table>
+    </div>
+    <audio src="C:\Users\Hirushi\Documents\assignments\gui individual project\reminders\sound.wav" id="notificationSound"></audio>
+    <script src="code7.js"></script>
+</body>
+</html>
