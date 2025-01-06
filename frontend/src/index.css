@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+
+}
+body{
+  background: #f5f5f5;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+
+  line-height: 1;
+  cursor:pointer;
+
+}
+.container{
+  padding-left:10px ;
+  padding-right: 10px;
+}
+.btn{
+  background:rgb(255, 191, 0);
+  color:#01013d;
+  padding:14px 25px;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor:pointer;border:0;
+  outline: 0;
+
+
+}
