@@ -10,25 +10,25 @@ const Home = () => {
     };
 
     return (
-        <div className="home">
-            <div className="card">
-                <img src={Todo} alt="To-Do" className="todo" />
+        <div className='home'>
+            <div className='card'>
+                <img src={Todo} alt='To-Do' className='card-img' />
                 <p>TO-DO</p>
-                <button className="click" onClick={ButtonClick}>
+                <button className='card-btn' onClick={ButtonClick}>
                     CLICK HERE
                 </button>
             </div>
-            <div className="card">
-                <img src={Reminder} alt="Reminders" className="reminder" />
+            <div className='card'>
+                <img src={Reminder} alt='Reminders' className='card-img' />
                 <p>REMINDERS</p>
-                <button className="click" onClick={ButtonClick}>
+                <button className='card-btn' onClick={ButtonClick}>
                     CLICK HERE
                 </button>
             </div>
-            <div className="card">
-                <img src={Timetable} alt="Timetable" className="timetable" />
+            <div className='card'>
+                <img src={Timetable} alt='Timetable' className='card-img' />
                 <p>TIMETABLE</p>
-                <button className="click" onClick={ButtonClick}>
+                <button className='card-btn' onClick={ButtonClick}>
                     CLICK HERE
                 </button>
             </div>
@@ -37,4 +37,3 @@ const Home = () => {
 };
 
 export default Home;
-
