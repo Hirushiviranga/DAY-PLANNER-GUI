@@ -1,0 +1,112 @@
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .todoApp h2 {
+    font-family: 'DM Serif Text', serif;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    color: #01013d;
+  }
+  
+  .row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .inputBox {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background: rgb(255, 191, 0);
+    color: #01013d;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background: #ffcc00;
+  }
+  
+  .taskList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .taskItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .taskItem span {
+    flex: 1;
+  }
+  
+  .reminderBadge {
+    background: #ff6f61;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-right: 10px;
+  }
+  
+  .deleteButton {
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .deleteButton:hover {
+    background: #ff1a1a;
+  }
+  
+  .checkboxLabel {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  @media (max-width: 600px) {
+    .row {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .inputBox {
+      width: 100%;
+    }
+  
+    .button {
+      width: 100%;
+    }
+  }
+  

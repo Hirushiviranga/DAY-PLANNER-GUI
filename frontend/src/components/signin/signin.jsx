@@ -1,6 +1,6 @@
 import React from 'react';
 import './signin.css';
-import User from '../../images/user (2).png';
+import User from '../../images/user.png';
 import Lock from '../../images/lock.png';
 import Fb from '../../images/fb.png';
 import Insta from '../../images/insta.png';
@@ -9,8 +9,6 @@ import X from '../../images/x.png';
 
 const SignIn = () => {
   return (
-    <div>
-        
     <div className="wrapper">
       <form>
         <h1>Sign In</h1>
@@ -35,15 +33,23 @@ const SignIn = () => {
 
         <div className="links">
           <h4>or</h4>
-          <img src={Fb} alt="Facebook Icon" />
-          <img src={Insta} alt="Instagram Icon" />
-          <img src={Chrome} alt="Chrome Icon" />
-          <img src={X} alt="X Icon" />
+          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+            <img src={Fb} alt="Facebook Icon" />
+          </a>
+          <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+            <img src={Insta} alt="Instagram Icon" />
+          </a>
+          <a href="https://www.google.com/chrome" target="_blank" rel="noopener noreferrer">
+            <img src={Chrome} alt="Chrome Icon" />
+          </a>
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+            <img src={X} alt="Twitter Icon" />
+          </a>
         </div>
       </form>
-    </div>
     </div>
   );
 };
 
 export default SignIn;
+

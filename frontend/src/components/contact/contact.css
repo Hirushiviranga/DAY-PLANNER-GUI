@@ -1,0 +1,132 @@
+/*body {
+    background: 
+        linear-gradient(rgba(58, 94, 111, 0.7), rgba(255, 255, 255, 0.7)), 
+        url('../../images/back-about.avif') no-repeat center center fixed;
+    background-size: cover;
+   
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5px auto; 
+    border-radius: 20px;
+    width: 592px;
+    height: 50vh;
+    padding: 20px;
+    background: linear-gradient(45deg, #01013d, white);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.main_header {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.sub_header {
+    font-size: large;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.para {
+    font-size: medium;
+    font-weight: 100;
+    margin-bottom: 10px;
+}
+
+.main_header img{
+    height:40px;
+    width:40px;
+}
+
+.ul li img{
+    height:30px;
+    width:30px;
+}*/
+/* General body styles */
+body {
+    background: 
+        linear-gradient(rgba(58, 94, 111, 0.85), rgba(255, 255, 255, 0.85)), 
+        url('../../images/back-about.avif') no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contact component container */
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5px auto;
+    border-radius: 20px;
+    width: 592px;
+    min-height: 50vh;
+    padding: 20px;
+    background: linear-gradient(45deg, #01013d, white);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Header styles */
+.main_header {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: black;
+    display: flex;
+    align-items: center;
+}
+
+.main_header img {
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+}
+
+/* Subheader styles */
+.sub_header {
+    font-size: large;
+    font-weight: 400;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* List styles */
+.contact ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.contact ul li {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: black;
+}
+
+.contact ul li img {
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact {
+        width: 90%;
+        padding: 15px;
+    }
+    .contact ul li {
+        font-size: 0.9rem;
+    }
+}
+

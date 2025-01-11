@@ -1,24 +1,25 @@
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    
 }
 
 
-body {
+/*body {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url('../../images/back.jpg') no-repeat center center/cover;
+    background:linear-gradient(rgba(13, 13, 13, 0.7), rgba(255, 255, 255, 0.7));
+    
 }
-
+*/
 .wrapper {
     width: 400px;
     background: rgba(245, 242, 242, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(5, 46, 61, 0.2);
     backdrop-filter: blur(10px);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     color: #fff;
@@ -44,12 +45,12 @@ body {
 .input-box input {
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgb(255, 191, 0);
     border: none;
     outline: none;
     border-radius: 25px;
-    font-size: 16px;
-    color: #fff;
+    font-size: 25px;
+    color:black;
     padding: 0 45px 0 20px;
 }
 
@@ -104,7 +105,7 @@ body {
 }
 
 .btn:hover {
-    background: #666;
+    background:rgb(255, 191, 0);
 }
 
 .register-link {
@@ -133,6 +134,25 @@ body {
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
     border: 0;
+}
+.links {
+    margin-top: 30px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px 0;
+    border-radius: 10px;
+}
+
+.links img {
+    margin: 0 15px;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.links img:hover {
+    transform: scale(1.1); 
 }
 
 

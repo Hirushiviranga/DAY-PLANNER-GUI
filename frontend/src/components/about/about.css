@@ -1,0 +1,39 @@
+body {
+    background: 
+        linear-gradient(rgba(58, 94, 111, 0.7), rgba(255, 255, 255, 0.7)), 
+        url('../../images/back-about.avif') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5px auto; 
+    border-radius: 20px;
+    width: 592px;
+    height: 50vh;
+    padding: 20px;
+    background: linear-gradient(45deg, #01013d, white);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.main_header {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.sub_header {
+    font-size: large;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.para {
+    font-size: medium;
+    font-weight: 100;
+    margin-bottom: 10px;
+}
