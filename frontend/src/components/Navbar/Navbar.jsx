@@ -1,24 +1,23 @@
 import React from "react";
-import './Navbar.css';
-import logo from '../../images/logo.webp'
-function App() {
-  
+import { Link } from "react-router-dom";
+import './navbar.css';
+import logo from '../../images/logo.png';
 
+const Navbar = () => {
   return (
-    <nav className='container'>
-        <img src={logo} alt="" className='logo'/>
-        <ul>
-            <li>Home</li>
-            <li>Progress</li>
-            <li>About Us</li>
-            <li>Contact Us</li>
-            <li><button className="btn">Login</button></li>
-
-              
+    <nav className='navbar'>
+      <div className="navbar-container">
+        <img src={logo} alt="DayPilot Logo" className='logo' />
+        <ul className='nav-links'>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/program">Programs</Link></li>
+          <li><Link to="/about">About Us</Link></li>
+          <li><Link to="/contact">Contact</Link></li>
+          
         </ul>
-
+      </div>
     </nav>
   );
-}
+};
 
-export default App;
+export default Navbar;

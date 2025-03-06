@@ -1,143 +1,275 @@
 /*import React, { useState, useEffect } from "react";
-import "./remides.css";
-import Sound from '../../images/sound.wav'
-const reminders = () => {
-  const [formData, setFormData] = useState({
-    title: "",
-    description: "",
-    date: "",
-    time: "",
-  });
-  const [reminders, setReminders] = useState([]);
-  const [timeoutIds, setTimeoutIds] = useState([]);
+import { useNavigate } from "react-router-dom";
+import "./reminders.css";
 
-  // Request notification permission on component mount
+const Reminders = () => {
+  const [reminders, setReminders] = useState([]);
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+  const [date, setDate] = useState("");
+  const [time, setTime] = useState("");
+  const navigate = useNavigate();
+
+  // Load reminders from localStorage when the component mounts
   useEffect(() => {
-    if ("Notification" in window) {
-      Notification.requestPermission().then((permission) => {
-        if (permission !== "granted") {
-          alert("Please allow notifications for this app to work properly.");
-        }
-      });
+    const savedReminders = localStorage.getItem("reminders");
+    if (savedReminders) {
+      setReminders(JSON.parse(savedReminders));
     }
   }, []);
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
+  // Save reminders to localStorage whenever reminders change
+  useEffect(() => {
+    localStorage.setItem("reminders", JSON.stringify(reminders));
+  }, [reminders]);
 
-  const addReminder = () => {
-    const { title, description, date, time } = formData;
+  const handleAddReminder = (e) => {
+    e.preventDefault();
 
+    // Validation
     if (!title || !description || !date || !time) {
       alert("All fields are required.");
       return;
     }
 
-    const dateTimeString = `${date} ${time}`;
-    const scheduledTime = new Date(dateTimeString);
-    const currentTime = new Date();
+    const newReminder = {
+      title,
+      description,
+      dateTime: `${date} ${time}`,
+    };
 
-    if (scheduledTime <= currentTime) {
-      alert("The scheduled time must be in the future.");
-      return;
-    }
+    // Update reminders state
+    setReminders((prevReminders) => [...prevReminders, newReminder]);
 
-    const newReminder = { ...formData, dateTimeString };
-    setReminders([...reminders, newReminder]);
-
-    const delay = scheduledTime - currentTime;
-
-    const timeoutId = setTimeout(() => {
-      triggerNotification(title, description);
-    }, delay);
-
-    setTimeoutIds([...timeoutIds, timeoutId]);
-
-    // Reset form
-    setFormData({ title: "", description: "", date: "", time: "" });
+    // Clear form fields
+    setTitle("");
+    setDescription("");
+    setDate("");
+    setTime("");
   };
 
-  const triggerNotification = (title, description) => {
-    document.getElementById("notificationSound").play();
-
-    if (Notification.permission === "granted") {
-      new Notification(title, {
-        body: description,
-        requireInteraction: true,
-      });
-    } else {
-      alert(`Reminder: ${title}\n${description}`);
-    }
-  };
-
-  const deleteReminder = (index) => {
-    clearTimeout(timeoutIds[index]);
-    setTimeoutIds(timeoutIds.filter((_, i) => i !== index));
-    setReminders(reminders.filter((_, i) => i !== index));
+  const handleDeleteReminder = (index) => {
+    const updatedReminders = reminders.filter((_, i) => i !== index);
+    setReminders(updatedReminders);
   };
 
   return (
     <div className="container">
-      <h2 style={{ textAlign: "center" }}>REMINDERS</h2>
-      <label htmlFor="title">Title</label>
-      <input
-        type="text"
-        name="title"
-        value={formData.title}
-        onChange={handleChange}
-      />
-      <label htmlFor="description">Description</label>
-      <input
-        type="text"
-        name="description"
-        value={formData.description}
-        onChange={handleChange}
-      />
-      <label htmlFor="date">Date</label>
-      <input
-        type="date"
-        name="date"
-        value={formData.date}
-        onChange={handleChange}
-      />
-      <label htmlFor="time">Time</label>
-      <input
-        type="time"
-        name="time"
-        value={formData.time}
-        onChange={handleChange}
-      />
-      <button className="btn" onClick={addReminder}>
-        ADD
-      </button>
-      <table>
-        <thead>
-          <tr>
-            <th>Title</th>
-            <th>Description</th>
-            <th>Date & Time</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          {reminders.map((reminder, index) => (
-            <tr key={index}>
-              <td>{reminder.title}</td>
-              <td>{reminder.description}</td>
-              <td>{reminder.dateTimeString}</td>
-              <td>
-                <button onClick={() => deleteReminder(index)}>Delete</button>
-              </td>
+      
+      <form onSubmit={handleAddReminder}>
+        <h2>Reminders</h2>
+        <div className="form-group">
+          <label>Title</label>
+          <input
+            type="text"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+            placeholder="Enter title"
+          />
+        </div>
+        <div className="form-group">
+          <label>Description</label>
+          <input
+            type="text"
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+            placeholder="Enter description"
+          />
+        </div>
+        <div className="form-group">
+          <label>Date</label>
+          <input
+            type="date"
+            value={date}
+            onChange={(e) => setDate(e.target.value)}
+          />
+        </div>
+        <div className="form-group">
+          <label>Time</label>
+          <input
+            type="time"
+            value={time}
+            onChange={(e) => setTime(e.target.value)}
+          />
+        </div>
+        <button type="submit" className="btn">
+          Add
+        </button>
+      </form>
+
+      <div className="reminders-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Description</th>
+              <th>Date & Time</th>
+              <th>Action</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
-      <audio src={Sound} id="notificationSound"></audio>
+          </thead>
+          <tbody>
+            {reminders.map((reminder, index) => (
+              <tr key={index}>
+                <td>{reminder.title}</td>
+                <td>{reminder.description}</td>
+                <td>{reminder.dateTime}</td>
+                <td>
+                  <button
+                    onClick={() => handleDeleteReminder(index)}
+                    className="delete-btn"
+                  >
+                    Delete
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <div className="navigation-buttons">
+        <button onClick={() => navigate("/todo")}>Go to Todo</button>
+        <button onClick={() => navigate("/timetable")}>Go to Timetable</button>
+      </div>
     </div>
   );
 };
 
-export default App;
+export default Reminders;*/
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import "./reminders.css";
 
-*/
+const Reminders = () => {
+  const [reminders, setReminders] = useState([]);
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+  const [date, setDate] = useState("");
+  const [time, setTime] = useState("");
+  const navigate = useNavigate();
+
+  // Load reminders from localStorage when the component mounts
+  useEffect(() => {
+    const savedReminders = localStorage.getItem("reminders");
+    if (savedReminders) {
+      setReminders(JSON.parse(savedReminders));
+    }
+  }, []);
+
+  // Save reminders to localStorage whenever reminders change
+  useEffect(() => {
+    localStorage.setItem("reminders", JSON.stringify(reminders));
+  }, [reminders]);
+
+  const handleAddReminder = (e) => {
+    e.preventDefault();
+
+    // Validation
+    if (!title || !description || !date || !time) {
+      alert("All fields are required.");
+      return;
+    }
+
+    const newReminder = {
+      title,
+      description,
+      dateTime: `${date} ${time}`,
+    };
+
+    // Update reminders state
+    setReminders((prevReminders) => [...prevReminders, newReminder]);
+
+    // Clear form fields
+    setTitle("");
+    setDescription("");
+    setDate("");
+    setTime("");
+  };
+
+  const handleDeleteReminder = (index) => {
+    const updatedReminders = reminders.filter((_, i) => i !== index);
+    setReminders(updatedReminders);
+  };
+
+  return (
+    <div className="container">
+      <form onSubmit={handleAddReminder}>
+        <h2>Reminders</h2>
+        <div className="form-group">
+          <label>Title</label>
+          <input
+            type="text"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+            placeholder="Enter title"
+          />
+        </div>
+        <div className="form-group">
+          <label>Description</label>
+          <input
+            type="text"
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+            placeholder="Enter description"
+          />
+        </div>
+        <div className="form-group">
+          <label>Date</label>
+          <input
+            type="date"
+            value={date}
+            onChange={(e) => setDate(e.target.value)}
+          />
+        </div>
+        <div className="form-group">
+          <label>Time</label>
+          <input
+            type="time"
+            value={time}
+            onChange={(e) => setTime(e.target.value)}
+          />
+        </div>
+        <button type="submit" className="btn">
+          Add
+        </button>
+      </form>
+
+      <div className="reminders-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Description</th>
+              <th>Date & Time</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            {reminders.map((reminder, index) => (
+              <tr key={index}>
+                <td>{reminder.title}</td>
+                <td>{reminder.description}</td>
+                <td>{reminder.dateTime}</td>
+                <td>
+                  <button
+                    onClick={() => handleDeleteReminder(index)}
+                    className="delete-btn"
+                  >
+                    Delete
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <div className="navigation-buttons">
+        <button onClick={() => navigate("/todo")}>Go to Todo</button>
+        <button onClick={() => navigate("/timetable")}>Go to Timetable</button>
+      </div>
+    </div>
+  );
+};
+
+export default Reminders;

@@ -1,0 +1,108 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Hirushi\\Desktop\\gui individual project\\Day Pilot-Desktop App\\Day Pilot\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7354B317-74BE-4ADE-AF72-98E9338ABBBB}|DataBaseApp\\DataBaseApp.csproj|c:\\users\\hirushi\\desktop\\gui individual project\\day pilot-desktop app\\day pilot\\databaseapp\\todopage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7354B317-74BE-4ADE-AF72-98E9338ABBBB}|DataBaseApp\\DataBaseApp.csproj|solutionrelative:databaseapp\\todopage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7354B317-74BE-4ADE-AF72-98E9338ABBBB}|DataBaseApp\\DataBaseApp.csproj|c:\\users\\hirushi\\desktop\\gui individual project\\day pilot-desktop app\\day pilot\\databaseapp\\todopage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{7354B317-74BE-4ADE-AF72-98E9338ABBBB}|DataBaseApp\\DataBaseApp.csproj|solutionrelative:databaseapp\\todopage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7354B317-74BE-4ADE-AF72-98E9338ABBBB}|DataBaseApp\\DataBaseApp.csproj|c:\\users\\hirushi\\desktop\\gui individual project\\day pilot-desktop app\\day pilot\\databaseapp\\homepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{7354B317-74BE-4ADE-AF72-98E9338ABBBB}|DataBaseApp\\DataBaseApp.csproj|solutionrelative:databaseapp\\homepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7354B317-74BE-4ADE-AF72-98E9338ABBBB}|DataBaseApp\\DataBaseApp.csproj|c:\\users\\hirushi\\desktop\\gui individual project\\day pilot-desktop app\\day pilot\\databaseapp\\homepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7354B317-74BE-4ADE-AF72-98E9338ABBBB}|DataBaseApp\\DataBaseApp.csproj|solutionrelative:databaseapp\\homepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7354B317-74BE-4ADE-AF72-98E9338ABBBB}|DataBaseApp\\DataBaseApp.csproj|c:\\users\\hirushi\\desktop\\gui individual project\\day pilot-desktop app\\day pilot\\databaseapp\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7354B317-74BE-4ADE-AF72-98E9338ABBBB}|DataBaseApp\\DataBaseApp.csproj|solutionrelative:databaseapp\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TodoPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Hirushi\\Desktop\\gui individual project\\Day Pilot-Desktop App\\Day Pilot\\DataBaseApp\\TodoPage.xaml.cs",
+              "RelativeDocumentMoniker": "DataBaseApp\\TodoPage.xaml.cs",
+              "ToolTip": "C:\\Users\\Hirushi\\Desktop\\gui individual project\\Day Pilot-Desktop App\\Day Pilot\\DataBaseApp\\TodoPage.xaml.cs",
+              "RelativeToolTip": "DataBaseApp\\TodoPage.xaml.cs",
+              "ViewState": "AgIAAIABAAAAAAAAAAAAAJEBAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-05T11:11:17.513Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HomePage.xaml",
+              "DocumentMoniker": "C:\\Users\\Hirushi\\Desktop\\gui individual project\\Day Pilot-Desktop App\\Day Pilot\\DataBaseApp\\HomePage.xaml",
+              "RelativeDocumentMoniker": "DataBaseApp\\HomePage.xaml",
+              "ToolTip": "C:\\Users\\Hirushi\\Desktop\\gui individual project\\Day Pilot-Desktop App\\Day Pilot\\DataBaseApp\\HomePage.xaml",
+              "RelativeToolTip": "DataBaseApp\\HomePage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-05T20:49:40.243Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TodoPage.xaml",
+              "DocumentMoniker": "C:\\Users\\Hirushi\\Desktop\\gui individual project\\Day Pilot-Desktop App\\Day Pilot\\DataBaseApp\\TodoPage.xaml",
+              "RelativeDocumentMoniker": "DataBaseApp\\TodoPage.xaml",
+              "ToolTip": "C:\\Users\\Hirushi\\Desktop\\gui individual project\\Day Pilot-Desktop App\\Day Pilot\\DataBaseApp\\TodoPage.xaml",
+              "RelativeToolTip": "DataBaseApp\\TodoPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-05T11:09:56.459Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HomePage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Hirushi\\Desktop\\gui individual project\\Day Pilot-Desktop App\\Day Pilot\\DataBaseApp\\HomePage.xaml.cs",
+              "RelativeDocumentMoniker": "DataBaseApp\\HomePage.xaml.cs",
+              "ToolTip": "C:\\Users\\Hirushi\\Desktop\\gui individual project\\Day Pilot-Desktop App\\Day Pilot\\DataBaseApp\\HomePage.xaml.cs",
+              "RelativeToolTip": "DataBaseApp\\HomePage.xaml.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAowBwAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-05T11:40:54.183Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Hirushi\\Desktop\\gui individual project\\Day Pilot-Desktop App\\Day Pilot\\DataBaseApp\\App.xaml.cs",
+              "RelativeDocumentMoniker": "DataBaseApp\\App.xaml.cs",
+              "ToolTip": "C:\\Users\\Hirushi\\Desktop\\gui individual project\\Day Pilot-Desktop App\\Day Pilot\\DataBaseApp\\App.xaml.cs",
+              "RelativeToolTip": "DataBaseApp\\App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-05T15:53:31.98Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -5,6 +5,17 @@
   box-sizing: border-box;
 
 }
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('../images/background.jpg'); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-attachment: fixed; 
+  min-height: 100vh;
+}
 a{
   text-decoration: none;
   color: inherit;
@@ -17,9 +28,9 @@ a{
   padding-left:10px ;
   padding-right: 10px;
 }
-.btn{
+/*.btn{
   background:rgb(255, 191, 0);
-  color:#01013d;
+  color:rgb(1, 1, 61);
   padding:14px 25px;
   font-size: 25px;
   border-radius: 30px;
@@ -27,4 +38,4 @@ a{
   outline: 0;
 
 
-}
+}*/

@@ -1,0 +1,35 @@
+﻿
+
+<Page x:Class="DataBaseApp.HomePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Home Page">
+    <Grid>
+        <!-- Background Image (Layer 1) -->
+        <Image Source="/images/background.jpg" Stretch="UniformToFill" Grid.Row="0" Grid.Column="0"/>
+
+        <!-- Content (Layer 2) -->
+        <StackPanel Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <!-- Logo -->
+            <Image Source="/images/logo.png" Width="150" Height="150" Margin="0,0,0,20"/>
+
+            <!-- Get Started Button -->
+            <Button Content="Get Started" 
+                    FontSize="24"
+                    Padding="10"
+                    Width="200"
+                    Height="50"
+                    Click="GetStarted_Click"
+                    Foreground="White">
+                <Button.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="#80FFA500" Offset="0.0"/>
+                        <!-- Semi-transparent Orange -->
+                        <GradientStop Color="#808B4513" Offset="1.0"/>
+                        <!-- Semi-transparent Brown -->
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+        </StackPanel>
+    </Grid>
+</Page>

@@ -1,0 +1,111 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: rgb(1, 1, 61,0.7);
+}
+
+.app {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #fff;
+  padding: 10px;
+  border-right: 1px solid #ccc;
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: auto 1fr;
+  height: 100%;
+}
+
+.days-row {
+  display: flex;
+  background-color: #f4f4f4;
+}
+
+.day-column {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.time-grid {
+  display: flex;
+  flex-direction: column;
+}
+
+.time-row {
+  display: flex;
+  height: 50px;
+  border-bottom: 1px solid #ccc;
+}
+
+.time-label {
+  width: 50px;
+  text-align: right;
+  padding-right: 10px;
+  font-size: 0.9rem;
+}
+
+.hour-slot {
+  flex: 1;
+  border-left: 1px solid #ccc;
+}
+.task-item {
+  background-color: #ffd700;
+  margin: 2px;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+.task-item:hover {
+  background-color: #ffa500;
+}
+.task-item {
+  background-color: #f0ad4e;
+  margin: 2px;
+  padding: 5px;
+  border-radius: 5px;
+  color: white;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.task-item:hover {
+  background-color: #ec971f;
+}
+
+.hour-slot {
+  border: 1px dashed #ccc;
+  min-height: 50px;
+  position: relative;
+  cursor: pointer;
+}
+.hour-slot:hover {
+  background-color: #e9ecef;
+}

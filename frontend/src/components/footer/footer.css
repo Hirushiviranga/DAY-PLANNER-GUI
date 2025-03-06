@@ -1,0 +1,117 @@
+
+.footer {
+  background-color: #08152f; /* Dark navy background */
+  color: #E2E8F0; /* Light gray text */
+  padding: 40px 20px;
+  font-family: 'Roboto', sans-serif;
+  width:100%;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0 auto;
+  
+}
+
+.footer-brand, .footer-links, .footer-contact {
+  flex: 1;
+  min-width: 250px;
+  margin: 10px;
+}
+
+.footer-header {
+  color: white; 
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.footer-brand p {
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+.footer-links h3, .footer-contact h3 {
+  color: #E2E8F0;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin: 10px 0;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: #38B2AC; /* Teal for links */
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.footer-link:hover {
+  color: #E2E8F0; /* Light gray on hover */
+}
+
+.footer-contact p {
+  margin: 5px 0;
+}
+/* Add this to your global styles (e.g., index.css or App.css) */
+body, html {
+  margin: 0;
+  padding: 0;
+  min-height: 100%; /* Ensure the body and HTML take up full height */
+}
+
+
+#root {
+  display: flex;
+  flex-direction: column; /* Set layout direction */
+  min-height: 100vh; /* Ensure full viewport height */
+}
+
+.App {
+  display: flex;
+  flex-direction: row;    
+  flex-grow: 1; /* Make the main content grow to fill available space */
+}
+
+footer {
+  margin-top: auto; /* Push footer to the bottom */
+  width: 100%; /* Ensure footer spans the full width */
+}
+
+
+.footer-bottom {
+  margin-top: 30px;
+  border-top: 1px solid rgba(226, 232, 240, 0.3); /* Subtle divider */
+  padding-top: 15px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .footer-brand, .footer-links, .footer-contact {
+      text-align: center;
+  }
+}
+/* Global container setup */
+
+
+
+
+  

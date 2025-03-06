@@ -1,7 +1,0 @@
-{
-  "dependencies": {
-    "@schedule-x/events-service": "^2.13.0",
-    "@schedule-x/react": "^2.13.0",
-    "@schedule-x/theme-default": "^2.13.0"
-  }
-}
