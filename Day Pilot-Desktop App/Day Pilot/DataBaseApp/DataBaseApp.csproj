@@ -37,7 +37,9 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <None Remove="images\image.png" />
 	  <None Remove="images\image1.jpg" />
+	  <None Remove="images\image2.jpg" />
 	  <None Remove="images\logo.png" />
 	</ItemGroup>
 
@@ -46,7 +48,13 @@
 		<Resource Include="images\background.jpg">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</Resource>
+		<Resource Include="images\image.png">
+		  <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</Resource>
 		<Resource Include="images\image1.jpg">
+		  <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</Resource>
+		<Resource Include="images\image2.jpg">
 		  <CopyToOutputDirectory>Never</CopyToOutputDirectory>
 		</Resource>
 		<Resource Include="images\logo.png">

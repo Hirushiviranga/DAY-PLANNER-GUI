@@ -1,0 +1,87 @@
+﻿<!--<Page x:Class="DataBaseApp.CalendarPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Calendar Page"
+      Background="Black">
+
+    <Grid Width="Auto" Height="743">
+        <Grid.Background>
+            <ImageBrush ImageSource="Images/background.jpg" Stretch="Fill"/>
+        </Grid.Background>
+        <Image Source="Images/logo.png" Width="79" Height="116" 
+HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,-22,0,0"/>
+
+        <StackPanel Margin="20,20,20,176">
+           
+            <TextBlock Text="Calendar" FontSize="24" FontWeight="Bold" Foreground="White" 
+                       HorizontalAlignment="Center"/>
+            
+           
+            <DatePicker x:Name="CalendarDatePicker" SelectedDateChanged="CalendarDatePicker_SelectedDateChanged" Margin="5"/>
+
+            <ScrollViewer VerticalScrollBarVisibility="Auto" Height="700">
+                <StackPanel x:Name="TimeSlotPanel"/>
+            </ScrollViewer>
+        </StackPanel>
+
+        <DockPanel VerticalAlignment="Top" LastChildFill="True" Margin="0,674,0,0">
+            <StackPanel Orientation="Vertical" Margin="0,0,0,20" Width="393">
+                <Button Content="Go to To-Do" Click="NavigateToToDo_Click" Width="148" RenderTransformOrigin="0.903,0.432"/>
+                <Button Content="Back" Style="{StaticResource BackButtonStyle}" Click="Back_Click" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="750,0,0,-25"/>
+            </StackPanel>
+        </DockPanel>
+    </Grid>
+</Page>-->
+<Page x:Class="DataBaseApp.CalendarPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Calendar Page"
+      Background="Black">
+
+    <Grid Width="Auto" Height="743">
+        <Grid.Background>
+            <ImageBrush ImageSource="Images/background.jpg" Stretch="Fill"/>
+        </Grid.Background>
+
+        <!-- Logo -->
+        <Image Source="Images/logo.png" Width="79" Height="116" 
+               HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,-22,0,0"/>
+
+        <!-- Main Content -->
+        <StackPanel Margin="20,20,20,176">
+            <!-- Title -->
+            <TextBlock Text="Calendar" FontSize="24" FontWeight="Bold" Foreground="White" 
+                       HorizontalAlignment="Center"/>
+
+            <!-- Date Picker -->
+            <DatePicker x:Name="CalendarDatePicker" SelectedDateChanged="CalendarDatePicker_SelectedDateChanged" Margin="5"/>
+
+            <!-- Scrollable Time Slots Section -->
+            <ScrollViewer VerticalScrollBarVisibility="Auto" Height="700">
+                <StackPanel x:Name="TimeSlotPanel"/>
+            </ScrollViewer>
+        </StackPanel>
+
+        <!-- Navigation Buttons -->
+        <Grid VerticalAlignment="Top" Margin="0,674,0,0">
+            <Grid.ColumnDefinitions>
+                <!-- Left Column for Back Button -->
+                <ColumnDefinition Width="*"/>
+                <!-- Right Column for Go to To-Do Button -->
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Back Button (Left) -->
+            <Button Content="Back" Style="{StaticResource BackButtonStyle}" 
+                    Click="Back_Click" HorizontalAlignment="Left" VerticalAlignment="Bottom" 
+                    Margin="20,0,0,0" Grid.Column="0"/>
+
+            <!-- Go to To-Do Button (Right) -->
+            <Button Content="Go to To-Do" Click="NavigateToToDo_Click" 
+                    HorizontalAlignment="Right" VerticalAlignment="Bottom" 
+                    Margin="0,0,20,0" Grid.Column="1"/>
+        </Grid>
+    </Grid>
+</Page>
+
+

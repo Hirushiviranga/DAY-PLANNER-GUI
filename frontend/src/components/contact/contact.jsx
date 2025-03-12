@@ -1,6 +1,6 @@
 import React from 'react';
 import './contact.css';
-import Msg from '../../images/msg.png';
+
 import Phone from '../../images/mobile.png';
 import Address from '../../images/location.avif';
 import Email from '../../images/email.png';
@@ -9,7 +9,7 @@ const Contact = () => {
   return (
     <div className='contact'>
       <h1 className='main-header'>
-        <img src={Msg} alt="Message Icon" className='icon' /> Contact Us
+         Contact Us
       </h1>
       
       <h3 className='sub-header'>Get in Touch with DayPilot</h3>

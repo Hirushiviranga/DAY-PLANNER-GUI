@@ -1,119 +1,17 @@
-/*.home {
-    display: flex;
-    flex-wrap: nowrap; 
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-    background-color:none;
-    overflow-x: auto; 
-    margin-top: 20%;
-}
 
-.card {
-    background: linear-gradient(45deg,#01013d,white);
-    border-radius: 10px;
-    width: 300px;
-    height: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s ease, background-color 0.2s ease;
-}
-
-.card:hover {
-    transform: scale(1.05);
-}
-
-.card-img {
-    display: inline-flex;
-    width: 200px;
-    height: 200px;
-    margin-left: 10px;
-}
-
-.card-btn {
-    background-color:rgb(255, 191, 0);
-    color: rgb(6, 6, 6);
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: auto;
-    height: 40px;
-    width: 80%;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: medium;
-    font-weight: bold;
-}
-
-.card p {
-    font-size: 1.2rem;
-    color: #fff;
-    font-weight: bold;
-    margin: 10px 0;
-}
-
-
-.card-btn {
-    background-color:rgb(255, 191, 0);
-    color: rgb(3, 3, 3);
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: auto;
-    height: 40px;
-    width: 80%;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: medium;
-    font-weight: bold;
-}
-
-.card-btn:hover {
-    background-color: #01013d;
-    color:#fff;
-    transform: scale(1.05);
-}
-
-.click {
-    background-color: rgb(255, 191, 0);
-    color: black;
-    font-weight: bold;
-    font-size: 1rem;
-    text-align: center;
-    border-radius: 15px;
-    cursor: pointer;
-}
-
-@media screen and (max-width: 768px) {
-    .card-btn {
-        height: 45px;
-        width: 60px; 
-        font-size: 0.9rem;
-    }
-}*/
-/* Apply the background image to the body or a parent container */
-
-body, html {
+body {
     margin: 0;
     padding: 0;
     height: 100%; /* Ensure the body and html take up the full height of the viewport */
-    background-image: url('path/to/your/image.jpg'); /* Add your image path here */
+     /* Add your image path here */
     background-size: cover; /* Ensures the image covers the entire viewport */
     background-position: center; /* Centers the background image */
     background-repeat: no-repeat; /* Prevents the image from repeating */
     background-attachment: fixed; /* Optional: Makes the background fixed while scrolling */
-    transition: background-image 0.5s ease; /* Smooth transition for background image */
+
 }
 
-/* Add a hover effect to change the background image */
-body:hover {
-    background-image: url('path/to/your/hover-image.jpg'); /* Change to a different image on hover */
-}
+
 
 .home {
     display: flex;

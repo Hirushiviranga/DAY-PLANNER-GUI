@@ -1,0 +1,49 @@
+﻿<Page x:Class="DataBaseApp.AboutUsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="About Us">
+    <Grid>
+        <!-- Background Image -->
+        <Image Source="/images/background.jpg" Stretch="UniformToFill" Margin="0,0,0,-213"/>
+
+        <!-- Main Content -->
+        <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="20">
+            <StackPanel>
+                <!-- Heading -->
+                <TextBlock Text="About Us" Style="{StaticResource MainHeaderStyle}" Margin="0,0,0,20"/>
+
+                <!-- Introduction -->
+                <TextBlock Text="Welcome to DayPilot – Your Companion for an Inspiring Lifestyle" Style="{StaticResource SubHeaderStyle}"/>
+                <TextBlock Text="At DayPilot, we believe that every day is an opportunity to achieve greatness. Our mission is to simplify your life and empower you to stay organized, productive, and stress-free." 
+                           Style="{StaticResource ParagraphStyle}" Margin="0,10,0,20"/>
+
+                <!-- Vision -->
+                <TextBlock Text="Our Vision" Style="{StaticResource SectionHeaderStyle}"/>
+                <TextBlock Text="Our vision is to revolutionize productivity by providing intuitive and efficient tools that help individuals and businesses take control of their time. We strive to inspire a well-balanced lifestyle where productivity meets peace of mind." 
+                           Style="{StaticResource ParagraphStyle}" Margin="0,10,0,20"/>
+
+                <!-- Mission -->
+                <TextBlock Text="Our Mission" Style="{StaticResource SectionHeaderStyle}"/>
+                <TextBlock Text="Our mission is to create a seamless planning experience through innovation, simplicity, and customization. DayPilot is designed to enhance your efficiency, enabling you to focus on what truly matters—your goals, dreams, and well-being." 
+                           Style="{StaticResource ParagraphStyle}" Margin="0,10,0,20"/>
+
+                <!-- Services -->
+                <TextBlock Text="Our Services" Style="{StaticResource SectionHeaderStyle}"/>
+                <StackPanel Style="{StaticResource ListStyle}">
+                    <TextBlock Text="• Smart Task Management: Organize and prioritize your to-do lists effortlessly." Style="{StaticResource ParagraphStyle}"/>
+                    <TextBlock Text="• Appointment Scheduling: Never miss an important meeting or event." Style="{StaticResource ParagraphStyle}"/>
+                    <TextBlock Text="• Goal Tracking: Set, monitor, and achieve your personal and professional milestones." Style="{StaticResource ParagraphStyle}"/>
+                    <TextBlock Text="• Customizable Dashboard: Tailor your planner to fit your workflow and style." Style="{StaticResource ParagraphStyle}"/>
+                    <TextBlock Text="• Seamless Integration: Sync with your favorite apps and calendars for a unified experience." Style="{StaticResource ParagraphStyle}"/>
+                </StackPanel>
+
+                <!-- Closing Statement -->
+                <TextBlock Text="Your journey to a more organized life starts here. Let’s plan together!" 
+                           Style="{StaticResource ParagraphStyle}" Margin="0,20,0,0" FontWeight="Bold" HorizontalAlignment="Center"/>
+            </StackPanel>
+        </ScrollViewer>
+
+        <!-- Back Button at Bottom -->
+        <Button Content="Back" Style="{StaticResource BackButtonStyle}" Click="Back_Click" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,652,0,0"/>
+    </Grid>
+</Page>

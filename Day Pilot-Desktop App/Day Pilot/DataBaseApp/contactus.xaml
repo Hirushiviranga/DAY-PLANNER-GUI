@@ -1,0 +1,20 @@
+﻿<Page x:Class="DataBaseApp.ContactUsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Contact Us">
+    <Grid>
+        <!-- Background Image -->
+        <Image Source="/images/background.jpg" Stretch="UniformToFill"/>
+
+        <!-- Main Content -->
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock Text="Contact Us" Style="{StaticResource MainHeaderStyle}" Margin="0,0,0,20"/>
+            <TextBlock Text="Mobile: +(94) 768330194" Style="{StaticResource ParagraphStyle}"/>
+            <TextBlock Text="Address: No.77, Flower Avenue, Colombo, Sri Lanka" Style="{StaticResource ParagraphStyle}"/>
+            <TextBlock Text="Email: support@daypilot.com" Style="{StaticResource ParagraphStyle}"/>
+        </StackPanel>
+
+        <!-- Back Button at Bottom -->
+        <Button Content="Back" Style="{StaticResource BackButtonStyle}" Click="Back_Click" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,20"/>
+    </Grid>
+</Page>

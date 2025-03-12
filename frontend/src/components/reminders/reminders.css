@@ -1,6 +1,6 @@
 
   body {
-    font-family: sans-serif;
+    
     background-color: beige;
     margin: 0;
     padding: 0;
@@ -8,13 +8,18 @@
   
   .container {
     display: flex;
-    flex-direction: column; /* Stack children vertically */
+    flex-direction: column; 
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #f4f4f4;
+   color:white;
     padding: 20px;
     margin-top: 400px;
+    background: rgba(255, 255, 255, 0.1); /* Transparent Glassmorphism */
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    align-items: center;
   }
   
   .form-group {
@@ -24,7 +29,7 @@
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px; /* Add space between form and table */
+    margin-bottom: 20px; 
   }
   
   .form-group {
@@ -66,7 +71,7 @@
     width: 100%;
     max-width: 800px;
   margin-top: 20px;
-    margin-bottom: 20px; /* Add space between table and buttons */
+    margin-bottom: 20px; 
     background: rgb(1, 1, 61,0.7);
     padding: 2rem;
     border-radius: 10px;
@@ -93,7 +98,7 @@
   }
   
   .reminders-table tr:hover {
-    background-color: #f9f9f9;
+    background-color:  #01013d;
   }
   
   .delete-btn {
@@ -129,3 +134,4 @@
   .navigation-buttons button:hover {
     background-color: #0056b3;
   }
+  

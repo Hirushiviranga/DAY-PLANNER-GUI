@@ -5,17 +5,11 @@
     align-items: center;
     height: 100vh;
     background-color: #f4f4f4;
-    margin-top: 20%;
+    margin-top: 50%;
   }
   
   form {
-   /* background: rgb(1, 1, 61,0.7);
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;*/
-    background: rgb(1, 1, 61,0.7);
+  background: rgb(1, 1, 61,0.7);
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);

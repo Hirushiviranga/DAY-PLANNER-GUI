@@ -1,85 +1,107 @@
-body {
-    /*background: 
-        linear-gradient(rgba(58, 94, 111, 0.85), rgba(255, 255, 255, 0.85)), 
-        url('../../images/back-about.avif') no-repeat center center fixed;
-    background-size: cover;*/
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-/* Contact component container */
 .contact {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    margin-top: 20% ;
-    border-radius: 20px;
-    width: 592px;
-    min-height: 50vh;
-    padding: 20px;
-    background: linear-gradient(45deg, #01013d, white);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.icon{
-    height: 60px;
-    width: 60px;
-    margin-right: 10px;
-
-}
-.main_header  {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-    color: black;
+    justify-content: center;
+    min-height: 100vh;
+    background: url('your-background-image.jpg') no-repeat center center/cover;
+    padding: 50px;
+    text-align: center;
+    position: relative;
+  }
+  
+  /* Transparent Box */
+  .contact::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 800px;
+    height: auto;
+    background: rgba(255, 255, 255, 0.15); /* Semi-transparent white */
+    border-radius: 15px;
+    backdrop-filter: blur(10px); /* Frosted Glass Effect */
+    z-index: -1;
+  }
+  
+  /* Main Header */
+  .main-header {
+    font-size: 2.5rem;
+    color: #fff;
+    font-weight: bold;
     display: flex;
     align-items: center;
-}
-
-.main_header img {
-    height: 40px;
-    width: 40px;
-    margin-right: 10px;
-}
-
-
-.sub_header {
-    font-size: large;
-    font-weight: 400;
-    margin-bottom: 10px;
-    color: #333;
+    gap: 10px;
+    text-transform: uppercase;
     margin-bottom: 20px;
-}
-
-.contact ul {
+  }
+  
+  /* Icons */
+  .icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  /* Sub Header */
+  .sub-header {
+    font-size: 1.5rem;
+    color: #ffcc00;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  
+  /* Contact List */
+  .contact-list {
     list-style: none;
     padding: 0;
+    max-width: 600px;
     width: 100%;
-}
-
-.contact ul li {
+  }
+  
+  .contact-list li {
+    font-size: 1.2rem;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
     display: flex;
     align-items: center;
-    font-size: 1rem;
-    margin-bottom: 15px;
-    color: black;
-}
-
-.contact ul li img {
-    height: 30px;
+    gap: 15px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .contact-list li:hover {
+    transform: scale(1.05);
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Contact Icons */
+  .contact-list img {
     width: 30px;
-    margin-right: 10px;
-}
-
-
-@media (max-width: 768px) {
-    .contact {
-        width: 90%;
-        padding: 15px;
+    height: 30px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .contact::before {
+      width: 90%;
     }
-    .contact ul li {
-        font-size: 0.9rem;
+    .main-header {
+      font-size: 2rem;
     }
-}
+    .sub-header {
+      font-size: 1.3rem;
+    }
+    .contact-list li {
+      font-size: 1rem;
+      padding: 12px;
+    }
+    .contact-list img {
+      width: 25px;
+      height: 25px;
+    }
+  }
+  

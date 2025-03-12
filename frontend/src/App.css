@@ -1,17 +1,4 @@
-/**{
-  background-image:url(../images/background.jpg); ;
-}
 
-@media (min-width: 768px) {
-  ul {
-    flex-direction: row;
-    justify-content: center;
-  }
-  .card {
-    width: 30%;
-  }
-}*/
-/* Global Styles */
 * {
   margin: 0;
   padding: 0;

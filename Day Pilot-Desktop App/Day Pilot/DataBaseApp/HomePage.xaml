@@ -1,5 +1,4 @@
 ﻿
-
 <Page x:Class="DataBaseApp.HomePage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -8,28 +7,36 @@
         <!-- Background Image (Layer 1) -->
         <Image Source="/images/background.jpg" Stretch="UniformToFill" Grid.Row="0" Grid.Column="0"/>
 
-        <!-- Content (Layer 2) -->
-        <StackPanel Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center">
-            <!-- Logo -->
-            <Image Source="/images/logo.png" Width="150" Height="150" Margin="0,0,0,20"/>
+        <!-- Two Columns -->
+        <Grid>
+            <!-- Column Definitions -->
+            <Grid.ColumnDefinitions>
+                <!-- Left Column: 50% of the width -->
+                <ColumnDefinition Width="0.5*"/>
+                <!-- Right Column: Remaining width -->
+                <ColumnDefinition Width="0.5*"/>
+            </Grid.ColumnDefinitions>
 
-            <!-- Get Started Button -->
-            <Button Content="Get Started" 
-                    FontSize="24"
-                    Padding="10"
-                    Width="200"
-                    Height="50"
-                    Click="GetStarted_Click"
-                    Foreground="White">
-                <Button.Background>
-                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                        <GradientStop Color="#80FFA500" Offset="0.0"/>
-                        <!-- Semi-transparent Orange -->
-                        <GradientStop Color="#808B4513" Offset="1.0"/>
-                        <!-- Semi-transparent Brown -->
-                    </LinearGradientBrush>
-                </Button.Background>
-            </Button>
-        </StackPanel>
+            <!-- Left Column: Image -->
+            <Image Source="/images/image.png" Stretch="UniformToFill" Grid.Column="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+
+            <!-- Right Column: Logo and Navigation Buttons -->
+            <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <!-- Logo -->
+                <Image Source="/images/logo.png" Width="150" Height="150"/>
+
+                <!-- Navigation Buttons -->
+                <Button Content="Get Started" 
+        Style="{StaticResource NavigationButtonStyle}" 
+        Click="GetStarted_Click" Margin="10"/>
+                <Button Content="About Us" 
+                        Style="{StaticResource NavigationButtonStyle}" 
+                        Click="NavigateToAboutUs_Click" Margin="10"/>
+                <Button Content="Contact Us" 
+                        Style="{StaticResource NavigationButtonStyle}" 
+                        Click="NavigateToContactUs_Click" Margin="10"/>
+                
+            </StackPanel>
+        </Grid>
     </Grid>
 </Page>

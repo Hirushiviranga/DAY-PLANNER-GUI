@@ -18,6 +18,25 @@ namespace DataBaseApp
     }
 }*/
 using System.Windows;
+/*using System.Windows.Controls;
+
+namespace DataBaseApp
+{
+    public partial class HomePage : Page
+    {
+        public HomePage()
+        {
+            InitializeComponent();
+        }
+
+        private void GetStarted_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new ToDoPage());
+        }
+    }
+}
+*/
+using System.Windows;
 using System.Windows.Controls;
 
 namespace DataBaseApp
@@ -27,6 +46,16 @@ namespace DataBaseApp
         public HomePage()
         {
             InitializeComponent();
+        }
+
+        private void NavigateToAboutUs_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new AboutUsPage());
+        }
+
+        private void NavigateToContactUs_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new ContactUsPage());
         }
 
         private void GetStarted_Click(object sender, RoutedEventArgs e)

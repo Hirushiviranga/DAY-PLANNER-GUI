@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fR3IzQrvmFM=",
+  "dgSpecHash": "FP4IBcGiIAk=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Hirushi\\Desktop\\gui individual project\\Day Pilot-Desktop App\\Day Pilot\\DataBaseApp\\DataBaseApp.csproj",
+  "projectFilePath": "C:\\Users\\Hirushi\\Desktop\\GUI\\DAY-PLANNER-GUI\\Day Pilot-Desktop App\\Day Pilot\\DataBaseApp\\DataBaseApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Hirushi\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Hirushi\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\7.0.0\\microsoft.bcl.asyncinterfaces.7.0.0.nupkg.sha512",
